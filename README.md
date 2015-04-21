@@ -583,18 +583,5 @@ public function list($p=1){
 			</div>
 		</div>
 	</div>
-	<div style='width:100%;margin-top: 20px;background: #DDD;padding: 10px 0;'>
-		<div style="width:1024px;margin:20px auto;">
-			1 概览：框架的设计思路以及功能的介绍<br>
-			2 开始：用户项目的文件组织，入口文件、控制器、模型、配置文件<br>
-			3 配置文件：介绍配置文件各项的意义<br>
-			4 路由规则：<br>
-			5 控制器：调用组件、调用其他控制器、调用模型、模版赋值、显示<br>
-			6 模型：数据库<br>
-			7 组件：http数据读取、数据验证过滤、session、工具<br>
-			8 扩展：<br>
-		</div>
-	</div>
-	<a href="#" class='go-up'><i class='icon-arrow-up icon-2x'></i></a>
 </body>
 </html>
