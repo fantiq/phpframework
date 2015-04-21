@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* 按钮组件 */
+$btn-lists : (def,#FFF),(prim,#428BCA),(info,#5BC0DE),(succe,#5CB85C),(warn,#F0AD4E),(danger,#D9534F);
+button,input[type="submit"],input[type="button"]{
+	margin: 0;
+	outline: 0;
+	&:focus,&:active{
+		outline: 0;
+	}
+}
+%btn{
+	font-size: 14px;
+	line-height: 20px;
+	padding: 5px 15px;
+
+	@include inline-block();
+	font-family: Microsoft YaHei;
+	vertical-align: middle;
+	cursor: pointer;
+	@include border-radius(3px);
+}
+.disable{
+	cursor: not-allowed;
+	@include opacity(0.6);
+}
+.btn-hide{
+	color: #333;
+	border:1px solid transparent;
+	background-color: transparent;
+	&:hover{
+		border:1px solid #CCC;
+		color: #333;
+		text-decoration: none;
+	}
+	&:active{
+		position: relative;
+		left: 1px;
+		top: 1px;
+	}
+}
+@each $btn,$color in $btn-lists{
+	.btn-#{$btn}{
+		@extend %btn;
+		background-color: $color;
+		border: 1px solid darken($color,20);
+		color: if($btn==def,#333,#FFF);
+		&:hover{
+			color: if($btn==def,#333,#FFF);
+			text-decoration: none;
+			background-color: darken($color,8);
+		}
+		&:active{
+			position: relative;
+			left: 1px;
+			top: 1px;
+		}
+	}
+}

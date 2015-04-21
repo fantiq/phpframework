@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/* 表格 */
+$table-color : #DDD;
+.table{
+	border: 1px solid $table-color;
+	// @include border-radius(4px);
+	tr{
+		border: 0;
+		font-size: 14px;
+		line-height: 25px;
+		border-bottom: 1px solid $table-color;
+		&:last-child{
+			border: 0;
+		}
+		&:hover{
+			background-color: lighten($table-color,10);
+		}
+	}
+	td{
+		text-align: center;
+		padding: 5px 20px;
+	}
+	.title{
+		td,th{
+			text-align: center;
+			padding: 5px 20px;
+			border-bottom: 2px solid $table-color;
+			font-weight: 800;
+		}
+		&:hover{
+			background-color: #FFF;
+		}
+	}
+}

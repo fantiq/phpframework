@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* 列表模版 */
+$panel-color : #CCC;
+.panel{
+	border: 1px solid $panel-color;
+	@include border-radius(3px);
+	min-height: 100px;
+	padding: 0;
+	.header{
+		font-weight: 800;
+		border-bottom: 1px solid $panel-color;
+		background-color: lighten($panel-color,10);
+		padding: 10px 20px;
+	}
+	.content{
+		color: #333;
+		border-bottom: 1px solid $panel-color;
+		&:last-child{
+			border: 0;
+		}
+	}
+}
+$panel-color : #CCC;
+$panel-on-color : #428BCA;
+.panel-test{
+	width: 99.5%;
+	border: 1px solid $panel-color;
+	@include border-radius(4px);
+	.header{
+		// @include border-top-left-radius(4px);
+		// @include border-top-right-radius(4px);
+		padding: 5px 10px;
+		border-bottom: 1px solid $panel-color;
+		font-weight: 800;
+		background-color: lighten($panel-color,10);
+		// @include background(linear-gradient(lighten($panel-color,20),$panel-color 120%));
+	}
+	.footer{
+		// @include border-bottom-left-radius(4px);
+		// @include border-bottom-right-radius(4px);
+		padding: 5px 10px;
+		border-bottom: 1px solid $panel-color;
+		font-weight: 800;
+		@include background(linear-gradient(lighten($panel-color,20),$panel-color 120%));
+	}
+	.item{
+		padding: 10px 20px;
+		border-bottom: 1px solid $panel-color;
+		font-size: 14px;
+		line-height: 20px;
+		color: #333;
+		&:last-child{
+			border: 0;
+		}
+		&:hover{
+			color: #FFF;
+			cursor: pointer;
+		}
+	}
+	.content{
+		padding: 10px 20px;
+		border-bottom: 1px solid $panel-color;
+		font-size: 14px;
+		line-height: 20px;
+		color: #333;
+		&:last-child{
+			border: 0;
+		}
+	}
+}

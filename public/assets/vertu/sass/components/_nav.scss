@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/* 网页头部导航条 */
+$nav-def-color: #24A0C6;
+// $nav-bg-color : #39B3D7;
+$nav-bg-color : #FFF;
+.navbar{
+	width: 99.7%;
+	background-color: $nav-bg-color;
+	border: 1px solid darken($nav-bg-color,20);
+	@include border-radius(4px);
+	margin: 0 auto;
+	ul{
+		@include inline-block();
+		list-style: none;
+		font-size: 0;
+		li{
+			font-family: Microsoft YaHei;
+			font-size: 14px;
+			img{
+				height: 30px;
+				vertical-align: middle;
+			}
+			a{
+				@include inline-block();
+				text-decoration: none;
+				color: #333;
+			}
+		}
+	}
+	.nav-main{
+		li{
+			@include inline-block();
+			a{
+				padding: 0 20px;
+				margin-left: 10px;
+				line-height: 3;
+				&:hover{
+					background-color: darken($nav-bg-color,5);
+				}
+			}
+		}
+		.on{
+			a{
+				background-color: darken($nav-bg-color,5);
+			}
+		}
+		.logo{
+			a{
+				padding: 0;
+				margin: 0 0 0 10px;
+				&:hover{
+					background-color: $nav-bg-color;
+				}
+			}
+		}
+	}
+	.nav-right{
+		float: right;
+		margin-right: 20px;
+		line-height: 2.6;
+		>li{
+			@include inline-block();
+			>a{
+				line-height: 2;
+				padding: 0 10px;
+				&:hover{
+					outline: 1px solid darken($nav-bg-color,20);
+				}
+			}
+		}
+	}
+}
+
+/* 下划线的导航 */
+.nav-lin{
+	a{
+		padding: 3px 20px;
+		color: #AAA;
+		font-size: 14px;
+		@include inline-block();
+		text-decoration: none;
+		&:hover{
+			text-decoration: none;
+			color: $nav-def-color;
+		}
+	}
+	.on{
+		font-weight: 800;
+		text-decoration: none;
+		color: $nav-def-color;
+		border-bottom: 2px solid $nav-def-color;
+	}
+}
+/* 标签型导航 */
+.nav-tab{
+	border-bottom: 1px solid #DDD;
+	a{
+		@include border-top-left-radius(4px);
+		@include border-top-right-radius(4px);
+		border: 1px solid #DDD;
+		border-bottom: 0;
+		background: #FFF;
+		padding: 3px 20px;
+		color: #333;
+		font-size: 14px;
+		@include inline-block();
+		text-decoration: none;
+		&:hover{
+			margin-bottom: -1px;
+			text-decoration: none;
+			border-bottom: 1px solid #FFF;
+			color: $nav-def-color;
+		}
+	}
+	.on{
+		margin-bottom: -1px;
+		text-decoration: none;
+		border-bottom: 1px solid #FFF;
+		color: $nav-def-color;
+	}
+}

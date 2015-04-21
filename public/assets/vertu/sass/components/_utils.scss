@@ -1,0 +1,31 @@
+@charset "UTF-8";
+// 分页
+$pagination-color : #60B5CF;
+.pagination{
+	list-style: none;
+	li{
+		@include inline-block();
+		a{
+			border: 1px solid #DDD;
+			background-color: #FFF;
+			text-decoration: none;
+			padding: 3px 10px;
+			&:hover{
+				border-color: $pagination-color;
+				background-color: lighten($pagination-color,30);
+			}
+		}
+	}
+	.on{
+		a{
+			border: 0;
+			background-color: #FFF;
+			font-weight: 800;
+			color: #000;
+			&:hover{
+				background-color: #FFF;
+				cursor: auto;
+			}
+		}
+	}
+}

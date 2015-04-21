@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/* 下拉列表 */
+$list-bg-color : #FFF;
+.drop-list{
+	list-style: none;
+	min-width: 100px;
+	padding: 5px 0;
+	border: 1px solid darken($list-bg-color,20);
+	background-color: $list-bg-color;
+	z-index: 999;
+	@include border-radius(3px);
+	@include inline-block();
+	@include box-shadow(1px 1px 3px 1px darken($list-bg-color,10));
+	li{
+		a{
+			display: block !important;
+			padding: 0 10px;
+			line-height: 2;
+			&:hover{
+				background-color: darken($list-bg-color,5);
+			}
+		}
+	}
+}
+
+$menu-list-color : #F6F6F6;
+.menu-list{
+	background-color: $menu-list-color;
+	font-family: Microsoft YaHei;
+	.title{
+		padding-left: 10px;
+		font-size: 14px;
+		line-height: 2.5;
+		font-weight: 800;
+		border-bottom: 1px solid darken($menu-list-color,10);
+	}
+	li{
+		a{
+			padding: 0 20px;
+			color: #333;
+			display: block;
+			line-height: 2.5;
+			&:hover{
+				color: #08c;
+				text-decoration: none;
+				background-color: darken($menu-list-color,5);
+			}
+		}
+	}
+	.sub{
+		li{
+			a{
+				font-size: 12px;
+				padding-left: 40px;
+			}
+		}
+	}
+	.on{
+		a{
+			color: #08c;
+			font-weight: 800;
+			background-color: darken($menu-list-color,5);
+		}
+	}
+}

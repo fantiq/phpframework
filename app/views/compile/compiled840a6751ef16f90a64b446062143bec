@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv='content-type' content='text/html;charset=utf-8;'>
+	<title>模版</title>
+	<link rel="stylesheet" type="text/css" href="./vertu/stylesheets/init.css">
+	<link rel="stylesheet" type="text/css" href="./common.css"><script type="text/javascript" src="./assets/jquery.js"></script>
+</head>
+<body>
+	
+<h1><?php echo $this->vars['user_name'];?></h1>
+<!-- 判断 -->
+<?php if($this->vars['is_logo']==1){?>
+<img src="https://www.baidu.com/img/bdlogo.png">
+<?php }?>
+<ul>
+<!-- 字符串索引的数组 -->
+<?php foreach($this->vars['lists'] as $li=>$v){?>
+<li><?php echo $v;?></li>
+<?php }?>
+<!-- 数字索引的数组 -->
+<?php foreach($this->vars['list1'] as $v){?>
+<li><?php echo $v;?></li>
+<?php }?>
+</ul>
+<form action='component/upload' method='post' enctype='multipart/form-data'><input type='hidden' name='__hash__' value='7a1c07ff60f9c07ffe8da34ecbf4edc2'>
+<input type='file' name='f_pic'>
+<input type='submit' value='upload' class='btn btn-prim'/>
+</form>
+</body>
+</html>

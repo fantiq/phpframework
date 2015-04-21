@@ -1,0 +1,10 @@
+.oa-flow-body{margin-top: -20px!important;background-color: #f6f7fb;}
+.oa-flow-left{padding: 0px;height: 600px;border-right:1px solid #DDD;background-color: #FFF}
+.oa-flow-left-nav-general{margin-top: 15px;border-bottom: 1px solid #DDD}
+.oa-flow-ul{margin: 0;padding: 0;}
+.oa-flow-left-nav-item{list-style: none;height: 35px;line-height: 35px;}
+.item-active{background-color: #3399CC;cursor: pointer;}
+.item-hover{background-color: #DDD;cursor: pointer;}
+.item-active {color: #FFF;}
+.oa-flow-left-nav-num{margin-left: 100px;color: #FFF}
+.oa-flow-left-nav-angle{margin-left: 110px;}

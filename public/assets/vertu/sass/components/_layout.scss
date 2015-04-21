@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* 页面布局 */
+$page_offset : 10px;
+.container{
+	margin-left: auto;
+	margin-right: auto;
+	padding-left:  $page_offset;
+	padding-right: $page_offset;
+	background-color: #FFF;
+}
+// @media (min-width: 1200px){
+// 	.container{
+// 		width: 1024px;
+// 	}
+// }
+.row{
+	margin-right: $page_offset*-1;
+	margin-left: $page_offset*-1;
+	font-size: 0;
+}
+// 分割的列数
+$col-num : 24*2;
+%col{
+	font-size: 14px;
+	position: relative;
+	min-height: 1px;
+	@include inline-block();
+	vertical-align: top; /*这句要写在 include下面*/
+}
+@for $i from 1 through $col-num{
+	.col-#{$i}{
+		@extend %col;
+		width: percentage($i/$col-num);
+	}
+}
+@for $i from 1 through $col-num{
+	.offset-#{$i}{
+		left: percentage($i/($col-num));
+	}
+}
+@media (max-width: 780px){
+	%respon-col{
+		margin-top: 10px;
+		width: 100%;
+	}
+	%respon-offset{
+		left: 0;
+	}
+	@for $i from 1 through $col-num{
+		.col-#{$i}{
+			@extend %respon-col;
+		}
+	}
+	@for $i from 1 through $col-num{
+		.offset-#{$i}{
+			@extend %respon-offset;
+		}
+	}
+}
