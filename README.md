@@ -1,47 +1,13 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv='content-type' content='text/html;charset=utf-8;'>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="../vertu/stylesheets/init.css">
-	<script type="text/javascript" src="../assets/js/jquery.js"></script>
-	<style type="text/css">
-		.content{
-			line-height: 25px;
-			padding-bottom: 20px;
-			margin-bottom: 20px;
-		}
-		.content h1{
-			border-bottom: 1px solid #AAA;
-		}
-		.go-up{
-			text-align:center;
-			background-color:#EEE;
-			position:fixed;
-			padding-top: 5px;
-			width:50px;
-			height:45px;
-			right:50px;
-			bottom:100px;
-		}
-		.go-up:hover{
-			text-decoration: none;
-			background-color: #DDD;
-		}
-	</style>
 </head>
 <body>
 	<div class='container'>
-		<div class='row'>
-			<div class='col-24 nav'>
-				<a href="#" class='on'>首页</a>
-				<a href="#">请求模块</a>
-				<a href="#">关于</a>
-			</div>
-		</div>
 		<div class='row' style='margin-top: 10px;'>
 			<div class='col-5 panel' id='side-list-box' style=''>
-				<div class='header'>列表</div>
 				<a class='item on' href='#overview'>概览</a>
 				<a class='item' href='#project'>项目</a>
 				<a class='item' href='#config'>配置文件</a>
@@ -54,7 +20,6 @@
 			</div>
 			<div class='col-18 offset-1'>
 				<a name="overview"></a>
-				<!-- 概览 -->
 				<div class='content'>
 					<h1>概览</h1>
 					<h4>1、MVC</h4>
@@ -118,10 +83,6 @@
 					<h4>主配置文件</h4>
 					<pre class='code'>
 &lt;?php
-/**
- * 每个配置的选项可以拆分成小的数组 存储在文件中
- * 通过include 加载模块的配置文件
- */
 return [
 	// 全局的应用程序配置项
 	'application'=>[
@@ -130,12 +91,12 @@ return [
 		'hooks'=>['file'=>'config/hooks.php','class'=>'Hooks'], 	// 指定钩子程序的位置
 	],
 	// 路由配置
-	'router'=>[
-	# 0 自动识别url
-	# 1 ?m=Admin&c=Access&a=login&arg1=1....
-	# 2 Admin/Access/login/arg1/arg2...
-	# 3 ?r=Admin/Access/login/arg1/arg2...
-	# 4 
+	// 'router'=>[
+	// 0 自动识别url
+	// 1 ?m=Admin&c=Access&a=login&arg1=1....
+	// 2 Admin/Access/login/arg1/arg2...
+	// 3 ?r=Admin/Access/login/arg1/arg2...
+	// 4 
 		'urlmode'=>0,
 		'defaultController'=>'Index',		// 默认控制器
 		'defaultAction'=>'index',			// 默认方法
@@ -241,40 +202,24 @@ class Hooks extends Base{
 	public function __construct(){
 		$this->preSystem();
 	}
-	/**
-	 * 框架开始执行之前 初始化之前
-	 * @return [type] [description]
-	 */
+	// 框架开始执行之前 初始化之前
 	public function preSystem(){}
-	/**
-	 * 路由开始解析之前
-	 * @return [type] [description]
-	 */
+	// 路由开始解析之前
 	public function preRoute(){
 		// echo 'hello';
 	}
-	/**
-	 * 路由解析之后 调用用户控制器之前
-	 * @return [type] [description]
-	 */
+	// 路由解析之后 调用用户控制器之前
 	public function preController(){
 		// echo "你请求的控制器是：".$this->dispatch->getControllerName()."<br>";
 		// echo "你请求的控制器方法是：".$this->dispatch->getActionName()."<br>";
 	}
-	/**
-	 * 发送内容到用户浏览器之前
-	 * @return [type] [description]
-	 */
+	//发送内容到用户浏览器之前
 	public function preResponse(){}
-	/**
-	 * 框架结束
-	 * @return [type] [description]
-	 */
+	框架结束
 	public function endSystem(){}
 }
 					</pre>
 				</div>
-				<!-- 路由解析规则 -->
 				<a name="parse"></a>
 				<div class='content'>
 					<h1>路由解析规则</h1>
@@ -336,8 +281,6 @@ class Hooks extends Base{
 						</tr>
 					</table>
 				</div>
-
-				<!-- 控制器 -->
 				<a name="controller"></a>
 				<div class='content'>
 					<h1>控制器</h1>
@@ -456,7 +399,6 @@ var_dump($tests->save(['id',1]));</pre>
 					<li><i class='icon-wrench'></i> setPrimaryKey() <span class='r'>设置主键</span></li>
 				</ul>
 				</div>
-				<!-- 模版 -->
 				<a name="template"></a>
 				<div class='content'>
 					<h1>模版</h1>
@@ -655,18 +597,4 @@ public function list($p=1){
 	</div>
 	<a href="#" class='go-up'><i class='icon-arrow-up icon-2x'></i></a>
 </body>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$(window).scroll(function(){
-			var wrap_h = $(document).scrollTop();
-			var sbox = $('#side-list-box');
-			if(wrap_h>50){
-				sbox.css({"position":"relative","top":(wrap_h-50)+"px"});
-			}else{
-				sbox.css({"top":"0px"});
-			}
-		});
-		// var sboxs = $('#side-list-box').children('a');
-	});
-</script>
 </html>
