@@ -1,0 +1,12 @@
+{
+    "name": "php/framework",
+    "description": "a php framework develop more quickly",
+    "type": "git",
+    "authors": [
+        {
+            "name": "fantiq",
+            "email": "fantiq@163.com"
+        }
+    ],
+    "require": {}
+}
