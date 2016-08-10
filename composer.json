@@ -1,8 +1,8 @@
 {
-    "name":         "test/phpframework",
+    "name":         "fantest/phpframework",
     "type":         "test",
     "description":  "composer私有仓库测试",
-    "homepage":     "http://git.kuaiqiangche.cc/common/tools",
+    "homepage":     "https://github.com/fantiq",
     "license":      "MIT",
     "authors":      [
         {
