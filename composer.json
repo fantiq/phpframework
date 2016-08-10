@@ -1,12 +1,26 @@
 {
-    "name": "php/framework",
-    "description": "a php framework develop more quickly",
-    "type": "git",
-    "authors": [
+    "name":         "test/phpframework",
+    "type":         "test",
+    "description":  "composer私有仓库测试",
+    "homepage":     "http://git.kuaiqiangche.cc/common/tools",
+    "license":      "MIT",
+    "authors":      [
         {
-            "name": "fantiq",
+            "name": "fanyilong",
             "email": "fantiq@163.com"
         }
     ],
-    "require": {}
+    "require":      {
+        "php": ">=7.0"
+    },
+    "autoload":     {
+        "psr-4": {
+            "framework\\": "src/"
+        }
+    },
+    "extra":        {
+        "branch-alias": {
+            "dev-master": "master"
+        }
+    }
 }
