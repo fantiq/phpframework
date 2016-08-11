@@ -4,11 +4,6 @@
     "description":  "composer私有仓库测试",
     "homepage":     "https://github.com/fantiq",
     "license":      "MIT",
-    "version" : "1.0.1",
-    "dist" : {
-        "url" : "https://github.com/fantiq/phpframework/archive/v1.0.1-dev.zip",
-        "type" : "zip"
-    },
     "authors":      [
         {
             "name": "fanyilong",
@@ -22,5 +17,11 @@
         "psr-4": {
             "framework\\": "src/"
         }
-    }
+    },
+    "repositories" : [
+        {
+            "type" : "composer",
+            "url" : "https://packagist.phpcomposer.com"
+        }
+    ]
 }
