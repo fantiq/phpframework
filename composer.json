@@ -8,7 +8,7 @@
     "dist" : {
         "url" : "https://github.com/fantiq/phpframework/archive/v1.0.1-dev.zip",
         "type" : "zip"
-    }
+    },
     "authors":      [
         {
             "name": "fanyilong",
