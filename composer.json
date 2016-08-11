@@ -1,6 +1,6 @@
 {
-    "name":         "fantest/phpframework",
-    "type":         "test",
+    "name":         "fantiq/phpframework",
+    "type":         "composer",
     "description":  "composer私有仓库测试",
     "homepage":     "https://github.com/fantiq",
     "license":      "MIT",
@@ -16,11 +16,6 @@
     "autoload":     {
         "psr-4": {
             "framework\\": "src/"
-        }
-    },
-    "extra":        {
-        "branch-alias": {
-            "dev-master": "master"
         }
     }
 }
